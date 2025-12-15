@@ -22,3 +22,10 @@ Meine Pipeline läft bei push und bei pull_request auf main.
 Zwei getrennte Schritte machen die Pipeline übersichtlicher.
 So kann man sehen was der Container ausgegeben hat auch wenn der Test später fehlschlägt.
 Außerdem kann man Start und Prüfung getrennt debuggen, falls etwas schiefgeht.
+
+
+
+Bonus: CI/CD
+Automatische Pipelines sind sinnvoll, weil sie alles automatisieren. Das bedeutet, dass Code schneller getestet und bereitgestellt wird, ohne dass jemand manuell einrichten muss. 
+
+In echten Projekten wie Webseiten, Mobile Apps oder Spielen wird CI/CD viel genutzt. Bei Webseiten sorgt es dafür, dass neue Funktionen oder Bugfixes schnell online sind. Bei Mobile Apps wird es genutzt, um Updates einfach zu machen. Und bei Spielen hilft es, sicherzustellen, dass jedes Update gut funktioniert.
