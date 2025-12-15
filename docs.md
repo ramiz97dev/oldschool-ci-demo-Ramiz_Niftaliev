@@ -19,3 +19,6 @@ Danach lief die Pipeline ohne Probleme und der Container-Test war erfolgreich.
 
 Meine Pipeline läft bei push und bei pull_request auf main.
 
+Zwei getrennte Schritte machen die Pipeline übersichtlicher.
+So kann man sehen was der Container ausgegeben hat auch wenn der Test später fehlschlägt.
+Außerdem kann man Start und Prüfung getrennt debuggen, falls etwas schiefgeht.
