@@ -16,3 +16,6 @@ Das hat aber nicht funktioniert, weil der GitHub Runner (ubuntu) bereits Docker 
 Dadurch gab es Konflikte, und der Build ist fehlgeschlagen.
 Ich habe den Schritt zur Installation von Docker entfernt, weil der Runner bereits alles Nötige für docker build und docker run bereitstellt.
 Danach lief die Pipeline ohne Probleme und der Container-Test war erfolgreich.
+
+Meine Pipeline läft bei push und bei pull_request auf main.
+
