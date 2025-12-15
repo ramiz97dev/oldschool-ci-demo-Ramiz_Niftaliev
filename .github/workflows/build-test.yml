@@ -20,8 +20,13 @@ jobs:
         run: |
           docker build -t oldschool-demo-image-max .
 
-      # 3. Container starten & Ausgabe testen
-      - name: Run container and test output
+      # 3. Container starten (nur starten und Ausgabe anzeigen)
+      - name: Run container
+        run: |
+          docker run oldschool-demo-image-max
+
+      # 4. Ausgabe prüfen
+      - name: Check container output
         run: |
           output=$(docker run oldschool-demo-image-max)
           echo "$output"
