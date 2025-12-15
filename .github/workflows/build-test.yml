@@ -8,31 +8,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Repository auschecken
+      # 1. Repo auschecken
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Docker installieren
-      - name: Install Docker
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker.io
-
-      # 3. Docker-Image bauen
+      # 2. Docker-Image bauen
       - name: Build Docker image
         run: |
-          docker build -t oldschool-demo-image-ramiz .
+          docker build -t oldschool-demo-image-max .
 
-      # 4 + 5. Container starten & Ausgabe testen
+      # 3. Container starten & Ausgabe testen
       - name: Run container and test output
         run: |
-          output=$(docker run oldschool-demo-image-ramiz)
+          output=$(docker run oldschool-demo-image-max)
           echo "$output"
 
-          # Prüfen ob die Ausgabe exakt stimmt
-          if [ "$output" != "OldSchool GmbH – automatischer Build erfolgreich! (ramiz.n)" ]; then
-            echo "Test fehlgeschlagen!"
+          if [ "$output" != "OldSchool GmbH – automatischer Build erfolgreich! (Max M.)" ]; then
+            echo " Test fehlgeschlagen!"
             exit 1
           fi
 
-          echo "Test erfolgreich!"
+          echo " Test erfolgreich!"
