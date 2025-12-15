@@ -2,6 +2,9 @@ name: Build and Test Container
 
 on:
   push:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build_and_test:
@@ -24,8 +27,8 @@ jobs:
           echo "$output"
 
           if [ "$output" != "OldSchool GmbH – automatischer Build erfolgreich! (Max M.)" ]; then
-            echo " Test fehlgeschlagen!"
+            echo "❌ Test fehlgeschlagen!"
             exit 1
           fi
 
-          echo " Test erfolgreich!"
+          echo "✅ Test erfolgreich!"
